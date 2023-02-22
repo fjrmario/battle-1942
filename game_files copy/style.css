@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'press-start-2p-font';
+    src: url(./../game_administrative/press-start-2p-font/PressStart2P-vaV7.ttf);
+}
+
+body{
+    font-family: 'press-start-2p-font', sans-serif;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: black;
+    color: green;
+}
+
+.startScreen{
+    height: 100vh;
+    /* display: none; */
+}
+
+.startScreen .ui{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    color: white;
+}
+
+.highscore{
+    color: yellowgreen;
+}
+
+
+.startScreen .counter{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    color: white;
+}
+
+.startScreen h1{
+    text-align: center;
+    margin: 15%;
+    font-size: 8.5rem;
+}
+
+.startScreen footer{
+    text-align: center;
+}
+
+.players{
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -10%;
+    color: yellowgreen;
+}
+
+.player:hover{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+
+footer .copyright{
+    margin-top: 12.5%;
+    color: white;
+}
+
+.settingScreen{
+  text-align: center;
+  margin-top: 15%;
+  display: none;
+}
+
+.settingContent{
+    margin: 50px 155px ;
+    border: 10px solid white;
+    padding-bottom: 2%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+.highscoreScreen{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 6fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    height: 100vh;
+    margin: auto 50px;
+    display: none;
+}
+
+.highscoreScreen p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameScreen{
+    background: url('./../game_administrative/1942_pictures/background.jpg');
+    width:100vw;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+.hero1{
+    background: url('./../game_administrative/1942_pictures/1942.gif');
+    background-position: -85px -180px;
+    width:28px;
+    height:28px;
+    position:absolute;
+    left: 0px;
+    top: 0px;
+    transform: translate(-50%, -50%);
+}
+.enemy1{
+    background: url('./../game_administrative/1942_pictures/1942.gif');
+    background-position: -30px -10px;
+    width:28px;
+    height:28px;
+    position:absolute;
+    display: none;
+    left: 0px;
+    top: -50px;
+    cursor: none;
+}
+
+.bullet{
+    background: url('./../game_administrative/1942_pictures/1942.gif');
+    background-position: -185px -400px;
+    width:18px;
+    height:18px;
+    position:absolute;
+    display: none;
+    left: 0px;
+    top: 0px;
+    animation: travel 6s;
+    cursor: none;
+}
+
+@keyframes travel {
+    0%{
+        transform: translate(-50%, -50%)
+    }
+
+    100%{
+        transform: translate(-50%, -5000%);
+    }
+}
+
