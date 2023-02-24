@@ -3,6 +3,29 @@
     src: url(./../game_administrative/press-start-2p-font/PressStart2P-vaV7.ttf);
 }
 
+:root{
+
+    --background-position-e1: -40px -35px;
+
+
+}
+
+.exploded{
+    background: url('./../game_administrative/1942_pictures/1942.gif');
+    background-position: -40px -35px;
+    animation: exploded 0.5s steps(5) 1; 
+}
+
+@keyframes exploded{
+    0%{
+        background-position: -40px -35px;
+    }
+
+    100%{
+        background-position: -155px -35px;
+    }
+}
+
 body{
     font-family: 'press-start-2p-font', sans-serif;
     height: 100vh;
@@ -14,9 +37,26 @@ body{
 
 .startScreen{
     height: 100vh;
-    /* display: none; */
+    display: block;
 }
 
+.ui{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    color: white;
+}   
+
+.ui .highscore{
+    color: red;
+}
+
+.counter{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    color: black;
+}
 .startScreen .ui{
     display: flex;
     justify-content: space-evenly;
@@ -56,9 +96,19 @@ body{
 
 .player:hover{
     cursor: pointer;
+    font-size: 2rem;
+}
+
+.leaderboard:hover{
+    cursor: pointer;
     font-size: 1.5rem;
 }
 
+#leaderboard{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
 footer .copyright{
     margin-top: 12.5%;
@@ -105,20 +155,30 @@ footer .copyright{
 }
 
 .highscoreScreen{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: none;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 6fr;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     height: 100vh;
     margin: auto 50px;
-    display: none;
 }
 
 .highscoreScreen p{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.scores{
+    color: white;
+    width: 250px;
+    height: 1rem;
+}
+
+.ranks{
+    display: flex;
+    line-height: 33px;
 }
 
 .gameScreen{
@@ -128,6 +188,24 @@ footer .copyright{
     background-repeat: no-repeat;
     background-size: cover;
     display: none;
+}
+
+.healthBar{
+    background: url(https://toppng.com/uploads/preview/pixel-heart-11550717414064zsafcfv.png);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    mix-blend-mode:multiply
+}
+
+.zoom{
+    width: 2px;
+    height: 180px;
+    background-color: rgb(104, 103, 103);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: -100px;
 }
 .hero1{
     background: url('./../game_administrative/1942_pictures/1942.gif');
@@ -172,5 +250,41 @@ footer .copyright{
     100%{
         transform: translate(-50%, -5000%);
     }
+}
+
+.gameOverScreen{
+    width: 700px;
+    height: 450px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 2px solid white;
+    display: none;
+}
+
+.gameover{
+    font-size: 4rem;
+    color: red
+}
+
+.data{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 5px;
+}
+
+.playAgain{
+    font-size: 2rem;
+    column-span: 2 / 3;
+    grid-column: 1/3;
+}
+
+.playAgain:hover{
+    transform: scale(0.9);
+    cursor: pointer
 }
 
