@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Battle-1942</title>
+</head>
+<body>
+
+	<!-- Start Screen -->
+	<div class="startScreen">
+		<div class="ui">
+			<p class="fancy">1 UP</p>
+			<p class="highscore">HIGH SCORE</p>
+			<p class="fancy">2 UP</p>
+		</div>
+		<div class="counter">
+			<div class="text">000000</div>
+			<div class="mainScore">000000</div>
+			<div class="text">000000</div>
+		</div>
+
+		<h1 class="title">1942</h1>
+
+		<footer>
+			<div class="players">
+				<p class="player" id="player1">PLAY</p>
+			</div>
+			<p class="leaderboard">LEADERBOARD</p>
+		</footer>	
+	</div>
+
+	<!-- Setting Screen -->
+	<div class="settingScreen">
+		<h2 class="title">SETTINGS</h2><br>
+		<div class="settingContent">
+			<div class="sounSystem">
+				<p>SOUND</p>
+				<input type="range" min="0" max="100" value="50" class="slider" id="myRange">
+			</div>
+			<div class="musicSystem">
+				<p>MUSIC</p>
+				<input type="range" min="0" max="100" value="50" class="slider" id="myRange">
+			</div>
+			<div class="brightnessSystem">
+				<p>BRIGHTNESS</p>
+				<input type="range" min="0" max="100" value="50" class="slider" id="myRange">
+			</div>
+		</div>	
+	</div>
+
+	<!-- High Score Screen -->
+	<div class="highscoreScreen">
+		<!--top-bar-->
+			<p class="rank">RANK</p>
+			<P class="score">SCORE</P>
+
+		<!--BOTTOM-BAR-->
+			<div id="rank">
+			</div>
+			<p id="leaderboard"></p>
+			</div>
+	</div>
+	
+	<!-- Game screen -->
+    <div class='gameScreen'>
+		<div class="ui"></div>
+			<div class="ui">
+				<p class="fancy">1 UP</p>
+				<p class="highscore">HIGH SCORE</p>
+				<p class="fancy">2 UP</p>
+			</div>
+			<div class="counter">
+				<div id="counter1">000000</div>
+				<div class="mainScore">000000</div>
+				<div class="text">000000</div>
+			</div>
+		<div id="zoom"></div>
+		<div class='hero1'></div>
+		<div id='enemies'></div>
+		<div id='bullets'></div>	
+		<div id="healthBar">
+		</div>
+
+	</div>
+
+	<div class="gameOverScreen">
+		<p class="gameover">GAMEOVER</p>
+		<div class="data">
+			<p class="score">SCORE:</p>
+			<p class = "scoreNumber">hi1</p>
+			<p class="shotdown">ENEMY SHOT:</p>
+			<p class = "enemyDown">hi3</p>
+			<p class="playAgain">HOME</p>
+		</div>
+	</div>
+
+</body>
+</html>
