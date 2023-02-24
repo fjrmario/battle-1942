@@ -17,11 +17,11 @@ It is in the year 1942, the world is at war but the Japanese is retreating. Get 
 ### **Screenshots**
 
 1. Welcome Screen  
-   ![welcome screen](./1942_pictures/startScreen.png "Welcome Screen")
+   ![welcome screen](./1942_pictures_copy/startScreen.png "Welcome Screen")
 2. Game Screen  
-   ![game screen](./1942_pictures/gameScreen.png "Game Screen")
+   ![game screen](./1942_pictures_copy/gameScreen.png "Game Screen")
 3. Result Screen  
-   ![result screen](./1942_pictures/resultScreen.png "Result Screen")
+   ![result screen](./1942_pictures_copy/resultScreen.png "Result Screen")
 
 ### **Technologies & Tools Used**
 
